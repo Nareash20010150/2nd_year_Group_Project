@@ -7,7 +7,7 @@ function patientDisplay(nic){
         data: {nic: nic},
         dataType: 'json',
         success: function(response) {
-            console.log(response.name);
+            console.log(response);
             let newSegment = "<div class=\"wrapper_MD\">\n" +
                 "            <div class=\"table_MD\">\n" +
                 "                    <div class=\"row_MD\">\n" +
@@ -30,6 +30,9 @@ function patientDisplay(nic){
                 "                    <div class=\"cell_MD_head\">Address</div>\n" +
                 "                        <div class=\"cell_MD\" data-title=\"Address\">\n" +
                 response.address +
+                "                    <div class=\"cell_MD_head\">District</div>\n" +
+                "                        <div class=\"cell_MD\" data-title=\"District\">\n" +
+                response.district +
                 "                        </div>\n" +
                 "                    <div class=\"cell_MD_head\">Email</div>\n" +
                 "                        <div class=\"cell_MD\" data-title=\"Email\">\n" +

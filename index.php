@@ -109,9 +109,7 @@ if (!isset($_SESSION['mailaddress'])) {
         <div class="midPortion">
             <h4>Our World Class Services</h4>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna.
-                Ut enim ad minim veniam.</p>
+            <p>We should be concerned not only about the health of individual patients, but also the health of our entire society.</p>
         </div>
         <div class="cards">
             <ul>

@@ -32,7 +32,7 @@ require_once("../conf/config.php");
                         <div style="margin: 5px">
                             <div style="text-align: left">
                                 <p style="float: left"><?php echo $row['date'] ?></p>
-                                <p><?php echo $row['time'] ?></p>
+                                <p><?php echo date('h:i A', strtotime($row['time'])) ?></p>
                             </div>
                             <a style="float: right" href="<?php echo BASEURL . '/Doctor/markRead.php?notID='.$row['notificationID']?>">
                                 Mark as read

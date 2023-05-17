@@ -56,6 +56,13 @@ if (isset($_SESSION['mailaddress']) && $_SESSION['userRole'] == 'Receptionist') 
 
             <div class="filter">
                 <input type="text" id="myInputName" onkeyup="filterByNamePatient()" placeholder="Search for names.." title="Type in a name">
+                <select name="district" id="district" onchange="filterByDistrict()">
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Nuwaraeliya">Nuwaraeliya</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Jaffna">Jaffna</option>
+                </select>
             </div>
 
             <?php
@@ -92,6 +99,7 @@ if (isset($_SESSION['mailaddress']) && $_SESSION['userRole'] == 'Receptionist') 
                             <div class="cell">Patient ID</div>
                             <div class="cell">Profile Image</div>
                             <div class="cell">Address</div>
+                            <div class="cell">District</div>
                             <div class="cell">Email</div>
                             <div class="cell">Contact Number</div>
                             <div class="cell">Gender</div>
@@ -139,6 +147,9 @@ if (isset($_SESSION['mailaddress']) && $_SESSION['userRole'] == 'Receptionist') 
                                 </div>
                                 <div class="cell" data-title="Address">
                                     <?php echo $row1['address']; ?>
+                                </div>
+                                <div class="cell" data-title="District">
+                                    <?php echo $row2['District']; ?>
                                 </div>
                                 <div class="cell" data-title="Email">
                                     <?php echo $row1['email']; ?>
@@ -217,6 +228,21 @@ if (isset($_SESSION['mailaddress']) && $_SESSION['userRole'] == 'Receptionist') 
                             </td>
                             <td colspan="2">
                                 <textarea type="text" name="address" id="IN_address" rows=3 required></textarea><div class="alert" id="address"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="District">District:</label>
+                            </td>
+                            <td colspan="2">
+                                <select name="district" id="district" required>
+                                    <option value="Gampaha">Gampaha</option>
+                                    <option value="Colombo">Colombo</option>
+                                    <option value="Nuwaraeliya">Nuwaraeliya</option>
+                                    <option value="Matara">Matara</option>
+                                    <option value="Jaffna">Jaffna</option>
+                                </select>
+                                <br><br>
                             </td>
                         </tr>
                         <tr id="emailRow">

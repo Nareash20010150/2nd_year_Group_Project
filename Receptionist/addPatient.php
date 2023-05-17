@@ -45,6 +45,7 @@ if (isset($_POST['addUser'])) {
     $gender = $_POST['gender'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $userRole = 'Patient';
+    $district = $_POST['district'];
     $dob = $_POST['dob'];
     $profile_image = $new_img_name;
 
@@ -116,8 +117,8 @@ if (isset($_POST['addUser'])) {
                             ('$nic', '$name', '$address', '$email', '$contactNum', '$gender', '$password', '$userRole', '$profile_image', '$dob', 0, '1');";
     $result = mysqli_query($con, $query);
 
-    $query = "INSERT INTO `patient`(`nic`, `weight`, `receptionistID`, `patient_type`, `height`, `illness`, `drug_allergies`, `medical_history_comments`, `currently_using_medicine`, `emergency_contact`) VALUES
-            ('$nic', '$weight', '$receptionistID', '$patientType', '$height', '$illness', '$drugAllergies', '$medHisCom', '$curUsingMed', '$emerCon');";
+    $query = "INSERT INTO `patient`(`nic`, `weight`, `receptionistID`, `patient_type`, `height`, `district`, `illness`, `drug_allergies`, `medical_history_comments`, `currently_using_medicine`, `emergency_contact`) VALUES
+            ('$nic', '$weight', '$receptionistID', '$patientType', '$height', '$district', '$illness', '$drugAllergies', '$medHisCom', '$curUsingMed', '$emerCon');";
     $result = mysqli_query($con, $query);
 
     $nic_query = "SELECT nic FROM user WHERE user_role = 'Receptionist' or user_role = 'Admin'";
