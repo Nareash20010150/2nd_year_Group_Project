@@ -1,0 +1,49 @@
+NIC: 200105302465
+
+Message : I am feeling sick. I need to consult the doctor immeditely.
+
+-----------------------------------------
+
+Name: Achala Ariyaratne
+
+NIC: 
+
+Email :- achala123@gmail.com
+
+password: Achala__123
+
+contact number: 0776543456
+
+Address: No.20,Thibirigasyaya,colombo-05.
+
+Emergency contact: 0778456743
+
+Curren: 0778456743
+
+Drug: No Drug allergies
+
+illness: No any other illness
+
+Medical comment: No medical comments
+
+-----------------------------------------------
+
+--add stock--
+
+fentanayl patch
+
+100
+
+
+--add medicine--
+
+metformin
+
+Novartis Pharmaceuticals Corporation
+
+1000
+
+5
+
+
+
